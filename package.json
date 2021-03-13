@@ -1,0 +1,26 @@
+{
+  "name": "biofinel",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "1. Zuerst Template in Html erstellen 2. Mit CSS stylen 3. Bilder für die Webseite vorbereiten 4. Mit Create React app die react app erstellen 5. Produkt Komponent zufügen 6. Produkt detail seite erstellen",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon --watch backend --exec node --experimental-modules backend/server.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ossicom/biofinel-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ossicom/biofinel-app/issues"
+  },
+  "homepage": "https://github.com/ossicom/biofinel-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
