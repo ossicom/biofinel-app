@@ -7,17 +7,17 @@ function App() {
   return (
     <BrowserRouter>
       <div className='grid-container'>
-        <header class='navigation row'>
+        <header className='navigation row'>
           <div>
             <a className='brand' href='/'>
               biofinel
             </a>
           </div>
           <div className='button'>
-            <a href='haselnuesse'>Haselnüsse</a>
-            <a href='oliven'>Oliven</a>
-            <a href='tuerkischer-honig'>Honig</a>
-            <a href='oliven oel'>Oliven Öl</a>
+            <a href='product/1'>Haselnüsse</a>
+            <a href='product/2'>Oliven</a>
+            <a href='product/3'>Honig</a>
+            <a href='product/4'>Oliven Öl</a>
           </div>
           <div>
             <a href='/card'>Warenkorb</a>
