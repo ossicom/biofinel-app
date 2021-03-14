@@ -50,3 +50,15 @@
       1. Bei der installation die fragen mit enter, enter, react, no, browser node, javascript, plugin enter.
    4. Create ./frontend/.env
    5. Add SKIP_PREFLIGHT_CHECK=true
+
+10. Add Redux to HomeScreen
+   1. npm install redux react-redux 
+   2. Create Store.js
+   3. initState={products:[]}
+   4. reducer = (state, action) => switch LOAD_PRODUCTS: {products: sction.payload }
+   5. export default createStore(reducer, initState)
+   6. Edit HomeScreen.js
+   7. shopName = useSelector(state=>state.products)  
+   8. const dispatch = useDispatch()
+   9. useEffect(()dispatch({type: LOAD_PRODUCTS, payload:data }))
+   10. Add store to index.js
