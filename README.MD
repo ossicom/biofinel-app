@@ -14,6 +14,7 @@
    7. Create 3 columns for product image, info and action
 
 7. Create Node.js Server
+
    1. run npm init in root folder
    2. update package.json set type: module
    3. Add js. to imports
@@ -26,6 +27,18 @@
    10. create route for api/produckts
    11. return products
    12. run npm start
-   13. install nodemon/ in package.json change "scripts": {
+   13. install nodemon. change in package.json "scripts": {
        "start":"nodemon --watch backend --exec node --experimental-modules backend/server.js "
        },
+
+8. Load Products from backend
+   1. edit HomeScreen.js
+   2. define products loading and error
+   3. create useEffect
+   4. define async fetchData and call it
+   5. install axios, in package.json 2te zeile einfügen "proxy":"http://127.0.0.1:5000",
+   6. get data from api/products
+   7. show them in the list
+   8. create loading component
+   9. create Message Box component
+   10. use them in HomeScreen
