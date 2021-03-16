@@ -47,7 +47,7 @@
    1. install VSCode eslinth extension
    2. npm install -D eslint
    3. run ./node_modules/.bin/eslint --init
-      1. Bei der installation die fragen mit enter, enter, react, no, browser node, javascript, plugin enter.
+      Bei der installation die fragen mit enter, enter, react, no, browser node, javascript, plugin enter.
    4. Create ./frontend/.env
    5. Add SKIP_PREFLIGHT_CHECK=true
 
@@ -62,3 +62,10 @@
    8. const dispatch = useDispatch()
    9. useEffect(()dispatch({type: LOAD_PRODUCTS, payload:data }))
    10. Add store to index.js
+
+11. Add Redux to ProductScreen
+   1. crfeate product details constant, actions and reducers
+   2. add reducer to store.js
+   3. use action in ProductsScreen.js
+   4. add /.api/products/:id to backend api
+   
