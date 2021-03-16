@@ -68,4 +68,8 @@
    2. add reducer to store.js
    3. use action in ProductsScreen.js
    4. add /.api/products/:id to backend api
+
+12. Handle Add to card button
+   1. Handle add to card in productScreen
+   2. create cartScrfeen.js
    
