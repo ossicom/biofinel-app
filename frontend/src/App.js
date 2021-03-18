@@ -1,28 +1,37 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 
 function App() {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
   return (
     <BrowserRouter>
       <div className='grid-container'>
         <header className='navigation row'>
           <div>
-            <a className='brand' href='/'>
+            <Link className='brand' to='/'>
               biofinel
-            </a>
+            </Link>
           </div>
           <div className='button'>
-            <a href='product/1'>Haselnüsse</a>
-            <a href='product/2'>Oliven</a>
-            <a href='product/3'>Honig</a>
-            <a href='product/4'>Oliven Öl</a>
+            <Link to='product/1'>Haselnüsse</Link>
+            <Link to='product/2'>Oliven</Link>
+            <Link to='product/3'>Honig</Link>
+            <Link to='product/4'>Oliven Öl</Link>
           </div>
           <div>
-            <a href='/card'>Warenkorb</a>
-            <a href='/signin'>Anmelden</a>
+            <Link to='/cart'>
+              Einkaufswagen
+              {cartItems.length > 0 && (
+                <span className='badge'>{cartItems.length}</span>
+              )}
+            </Link>
+            <Link to='/signin'>Anmelden</Link>
           </div>
         </header>
         <main>

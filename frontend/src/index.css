@@ -75,7 +75,7 @@ ul {
 li {
   margin-top: 1rem;
 }
-input, 
+input,
 select,
 textarea,
 button {
@@ -87,11 +87,11 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-button{
+button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
-input:hover, 
+input:hover,
 select:hover,
 textarea:hover,
 button:hover {
@@ -140,6 +140,15 @@ a.kaffee {
 
 a.anmelden {
   padding-right: 5rem;
+}
+/*der einkaufswagen style*/
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
 }
 .row {
   display: flex;
@@ -211,16 +220,16 @@ img.large {
   color: #a02020;
   font-size: 2rem;
 }
-.alert{
+.alert {
   padding: 1rem;
   margin: 0.1rem solid transparent;
   border-radius: 0.5rem;
 }
-.alert-info{
+.alert-info {
   color: #2020a0;
   background-color: #e0e0ff;
 }
-.alert-danger{
+.alert-danger {
   color: #a02020;
   background-color: #ffe0e0e0;
 }

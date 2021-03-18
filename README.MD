@@ -32,6 +32,7 @@
        },
 
 8. Load Products from backend
+
    1. edit HomeScreen.js
    2. define products loading and error
    3. create useEffect
@@ -44,6 +45,7 @@
    10. use them in HomeScreen
 
 9. Install ESlint for code linting
+
    1. install VSCode eslinth extension
    2. npm install -D eslint
    3. run ./node_modules/.bin/eslint --init
@@ -52,24 +54,29 @@
    5. Add SKIP_PREFLIGHT_CHECK=true
 
 10. Add Redux to HomeScreen
-   1. npm install redux react-redux 
-   2. Create Store.js
-   3. initState={products:[]}
-   4. reducer = (state, action) => switch LOAD_PRODUCTS: {products: sction.payload }
-   5. export default createStore(reducer, initState)
-   6. Edit HomeScreen.js
-   7. shopName = useSelector(state=>state.products)  
-   8. const dispatch = useDispatch()
-   9. useEffect(()dispatch({type: LOAD_PRODUCTS, payload:data }))
-   10. Add store to index.js
+11. npm install redux react-redux
+12. Create Store.js
+13. initState={products:[]}
+14. reducer = (state, action) => switch LOAD_PRODUCTS: {products: sction.payload }
+15. export default createStore(reducer, initState)
+16. Edit HomeScreen.js
+17. shopName = useSelector(state=>state.products)
+18. const dispatch = useDispatch()
+19. useEffect(()dispatch({type: LOAD_PRODUCTS, payload:data }))
+20. Add store to index.js
 
-11. Add Redux to ProductScreen
-   1. crfeate product details constant, actions and reducers
-   2. add reducer to store.js
-   3. use action in ProductsScreen.js
-   4. add /.api/products/:id to backend api
+21. Add Redux to ProductScreen
+22. crfeate product details constant, actions and reducers
+23. add reducer to store.js
+24. use action in ProductsScreen.js
+25. add /.api/products/:id to backend api
 
-12. Handle Add to card button
-   1. Handle add to card in productScreen
-   2. create cartScrfeen.js
-   
+26. Handle Add to card button
+27. Handle add to card in productScreen
+28. create cartScrfeen.js
+
+29. Impement Add to cart action
+30. Create AddToCart constants, actions and reducers
+31. add reducer to store.js
+32. use action in cartScreen.js
+33. render cartItem.length
