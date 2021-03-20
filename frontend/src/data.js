@@ -5,7 +5,7 @@ const data = {
       name: 'Geröstete Haselnüsse',
       category: 'Haselnüsse',
       image: '/images/nuesse/haselnuesse.jpg',
-      price: '400 gram  12.90 Fr.',
+      price: '2.90 Fr.',
       countInStock: 20,
       brand: 'kocfindik',
       numReviews: 10,

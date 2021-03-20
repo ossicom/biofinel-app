@@ -53,30 +53,40 @@
    4. Create ./frontend/.env
    5. Add SKIP_PREFLIGHT_CHECK=true
 
-10. Add Redux to HomeScreen
-11. npm install redux react-redux
-12. Create Store.js
-13. initState={products:[]}
-14. reducer = (state, action) => switch LOAD_PRODUCTS: {products: sction.payload }
-15. export default createStore(reducer, initState)
-16. Edit HomeScreen.js
-17. shopName = useSelector(state=>state.products)
-18. const dispatch = useDispatch()
-19. useEffect(()dispatch({type: LOAD_PRODUCTS, payload:data }))
-20. Add store to index.js
+10 Add Redux to HomeScreen
 
-21. Add Redux to ProductScreen
-22. crfeate product details constant, actions and reducers
-23. add reducer to store.js
-24. use action in ProductsScreen.js
-25. add /.api/products/:id to backend api
+- npm install redux react-redux
+- Create Store.js initState={products:[]}
+- reducer = (state, action) => switch LOAD_PRODUCTS: {products: sction.payload }
+- export default createStore(reducer, initState)
+- Edit HomeScreen.js
+- shopName = useSelector(state=>state.products)
+- const dispatch = useDispatch()
+- useEffect(()dispatch({type: LOAD_PRODUCTS, payload:data }))
+- Add store to index.js
 
-26. Handle Add to card button
-27. Handle add to card in productScreen
-28. create cartScrfeen.js
+- Add Redux to ProductScreen
+- crfeate product details constant, actions and reducers
+- add reducer to store.js
+- use action in ProductsScreen.js
+- add /.api/products/:id to backend api
 
-29. Impement Add to cart action
-30. Create AddToCart constants, actions and reducers
-31. add reducer to store.js
-32. use action in cartScreen.js
-33. render cartItem.length
+14 Handle Add to card button
+
+- Handle add to card in productScreen
+- create cartScrfeen.js
+
+15 Implement Add to cart action
+
+- Create AddToCart constants, actions and reducers
+- add reducer to store.js
+- use action in cartScreen.js
+- render cartItem.length
+
+16 Build Cart Screen
+
+- create 2 columns for cart items and cart action
+- cartItems.length === 0 ? cart is empty
+- show item image, name, qty and price
+- Proceed to Checkout button
+- Implement remove from cart action
