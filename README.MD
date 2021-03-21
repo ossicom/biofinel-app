@@ -90,3 +90,11 @@
 - show item image, name, qty and price
 - Proceed to Checkout button
 - Implement remove from cart action
+
+17 Implement remove from cart Aktions
+
+- create rempveFromCart constants, actions and reducers
+- add reducer to store.js
+- use action in CartScreen.js
+
+18

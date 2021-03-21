@@ -41,7 +41,7 @@ export default function ProductScreen(props) {
                   <h1>{product.name}</h1>
                 </li>
                 <li>
-                  <h2>{product.price}0 Fr.</h2>
+                  <h2>{product.price} .-- Fr.</h2>
                 </li>
                 <li>
                   <h2>{product.description}</h2>
@@ -56,7 +56,7 @@ export default function ProductScreen(props) {
                       <div>
                         <h2>Preis</h2>
                       </div>
-                      <div className='price'>{product.price}</div>
+                      <div className='price'>{product.price}.-- Fr.</div>
                     </div>
                   </li>
                   <li>
@@ -109,7 +109,7 @@ export default function ProductScreen(props) {
                 </ul>
               </div>
               <Link to='/'>
-                <h5>Back to result</h5>
+                <h5>Back to Shopping</h5>
               </Link>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
 
 export default function CartScreen(props) {
@@ -19,7 +19,7 @@ export default function CartScreen(props) {
   }, [dispatch, productId, qty]);
   //löschen eines produkts
   const removeFromCartHandler = (id) => {
-    //delete action
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -32,7 +32,9 @@ export default function CartScreen(props) {
         {cartItems.length === 0 ? (
           <MessageBox>
             Ihr Einkaufswagen ist leer!
-            <Link to='/'>Weiter zur Homepage</Link>
+            <Link to='/'>
+              <h4>Back to Shopping</h4>
+            </Link>
           </MessageBox>
         ) : (
           <ul>
@@ -65,13 +67,13 @@ export default function CartScreen(props) {
                       ))}
                     </select>
                   </div>
-                  <div>{item.price}0 Fr.</div>
+                  <div>{item.price} .-- Fr.</div>
                   <button
                     type='button'
                     onClick={() => removeFromCartHandler(item.product)}
                   >
                     löschen
-                  </button>
+                  </button>{' '}
                 </div>
               </li>
             ))}
@@ -83,9 +85,11 @@ export default function CartScreen(props) {
           <ul>
             <li>
               <h2>
-                Zwischensumme ({cartItems.reduce((a, c) => a + c.qty, 0)}
-                Produkte, inkl. Mwst.)
-                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}0 Fr.
+                Zwischensumme<br></br> (
+                {cartItems.reduce((a, c) => a + c.qty, 0)}
+                Produkt(e), inkl. Mwst.)<br></br>
+                <br></br>Total<br></br>
+                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}.-- Fr.
               </h2>
             </li>
             <li>
@@ -100,6 +104,9 @@ export default function CartScreen(props) {
             </li>
           </ul>
         </div>
+        <Link to='/'>
+          <h4>Back to Shopping</h4>
+        </Link>
       </div>
     </div>
   );
