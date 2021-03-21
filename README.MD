@@ -97,4 +97,19 @@
 - add reducer to store.js
 - use action in CartScreen.js
 
-18
+18 Connect to MongoDB
+
+- npm install mongoose
+- in Terminal, brew tap mongodb/brew
+- brew install mongodb-community@4.4
+- brew services start mongodb-community@4.4, brew services stop mongodb-community@4.4
+- connect to mongoDB
+- create config.js
+- npm install dotenv
+- export MoONGODB_URL
+- create models/userModel.js
+- create userSchema and userModel
+- create models/productModel.js
+- create productSchema and productModel
+- create userRoute
+- seed sample data
