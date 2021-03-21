@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: '1',
       name: 'Geröstete Haselnüsse',
       category: 'Haselnüsse',
       image: '/images/nuesse/haselnuesse.jpg',
@@ -28,7 +27,6 @@ const data = {
       description: 'Bio Haselnüsse aus Rize TR',
     },
     {
-      _id: '2',
       name: 'Grüne Oliven',
       category: 'Oliven',
       image: '/images/oliven/oliven.jpg',
@@ -39,7 +37,6 @@ const data = {
       description: 'Oliven Gross',
     },
     {
-      _id: '3',
       name: 'Honig',
       category: 'Honig',
       image: '/images/honig/honigglas.jpg',
@@ -50,7 +47,6 @@ const data = {
       description: 'Bio Honig',
     },
     {
-      _id: '4',
       name: 'Oliven Öl',
       category: 'Olivenöle',
       image: '/images/olive-oel/flasche-o.oel.jpg',
@@ -61,7 +57,6 @@ const data = {
       description: 'Kaltgepresste Oliven Öl',
     },
     {
-      _id: '5',
       name: 'Türkischer Honig',
       category: 'Honig',
       image: '/images/olive-oel/flasche-o.oel.jpg',
@@ -72,7 +67,6 @@ const data = {
       description: 'Bio Haselnüsse',
     },
     {
-      _id: '6',
       name: 'Türkischer Kaffee',
       category: 'Haselnüsse',
       image: '/images/olive-oel/flasche-o.oel.jpg',

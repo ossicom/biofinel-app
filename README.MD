@@ -113,3 +113,10 @@
 - create productSchema and productModel
 - create userRoute
 - seed sample data
+
+19 Create sample products in mongoDB
+
+- create models/productModels.js
+- create productSchema and productModel
+- create productRoute
+- seed sample data
