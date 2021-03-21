@@ -53,7 +53,7 @@
    4. Create ./frontend/.env
    5. Add SKIP_PREFLIGHT_CHECK=true
 
-10 Add Redux to HomeScreen
+10. Add Redux to HomeScreen
 
 - npm install redux react-redux
 - Create Store.js initState={products:[]}
@@ -71,19 +71,19 @@
 - use action in ProductsScreen.js
 - add /.api/products/:id to backend api
 
-14 Handle Add to card button
+14. Handle Add to card button
 
 - Handle add to card in productScreen
 - create cartScrfeen.js
 
-15 Implement Add to cart action
+15. Implement Add to cart action
 
 - Create AddToCart constants, actions and reducers
 - add reducer to store.js
 - use action in cartScreen.js
 - render cartItem.length
 
-16 Build Cart Screen
+16. Build Cart Screen
 
 - create 2 columns for cart items and cart action
 - cartItems.length === 0 ? cart is empty
@@ -91,13 +91,13 @@
 - Proceed to Checkout button
 - Implement remove from cart action
 
-17 Implement remove from cart Aktions
+17. Implement remove from cart Aktions
 
 - create rempveFromCart constants, actions and reducers
 - add reducer to store.js
 - use action in CartScreen.js
 
-18 Connect to MongoDB
+18. Connect to MongoDB
 
 - npm install mongoose
 - in Terminal, brew tap mongodb/brew
@@ -114,9 +114,20 @@
 - create userRoute
 - seed sample data
 
-19 Create sample products in mongoDB
+19. Create sample products in mongoDB
 
 - create models/productModels.js
 - create productSchema and productModel
 - create productRoute
 - seed sample data
+
+20. Create Sign-in Backend
+
+- create /signin api
+- check email and password
+- generate token
+- install json web token
+- install dotenv
+- return token and data
+- test it using postman
+  bei video 21 weitermachen
