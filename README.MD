@@ -130,4 +130,15 @@
 - install dotenv
 - return token and data
 - test it using postman
-  bei video 21 weitermachen
+
+21. Design SignIn Screen
+1. create SigninScreen
+1. render email and password fields
+1. create signin constants, actions and reducers
+1. Update Header based on user login
+
+1. Implement SignIn Action
+   1. create signin constants, actions and reducers
+   2. add reducer to store.js
+   3. use action in SigninScreen.js
+      video 22 min 20 weitermachen
