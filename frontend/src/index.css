@@ -219,6 +219,10 @@ img.large {
 }
 
 /* Alerts */
+.loading {
+  display: block !important;
+}
+
 .success {
   color: rgb(61, 99, 5);
   font-size: 2rem;

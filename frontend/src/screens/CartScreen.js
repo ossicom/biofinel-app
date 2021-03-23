@@ -28,10 +28,10 @@ export default function CartScreen(props) {
   return (
     <div className='row top'>
       <div className='col-2'>
-        <h1>Ihr Einkaufswagen</h1>
+        <h1>Ihr Warenkorb</h1>
         {cartItems.length === 0 ? (
           <MessageBox>
-            Ihr Einkaufswagen ist leer!
+            Ihr Warenkorb ist leer!
             <Link to='/'>
               <h4>Back to Shopping</h4>
             </Link>

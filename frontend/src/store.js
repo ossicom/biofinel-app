@@ -5,7 +5,10 @@ import {
   productDetailsReducer,
   productListReducer,
 } from './reducers/productReducers';
-import { userSigninReducer } from './reducers/userReducers';
+import {
+  userRegisterReducer,
+  userSigninReducer,
+} from './reducers/userReducers';
 
 //code unten verhindert das löschen der produkte wenn die seite refresht wird zusammen in cartAction.js
 const initialState = {
@@ -25,6 +28,7 @@ const reducer = combineReducers({
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userSignin: userSigninReducer,
+  userRegister: userRegisterReducer,
 });
 
 const composeEnhanger = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
