@@ -87,7 +87,7 @@ export default function CartScreen(props) {
               <h2>
                 Zwischensumme<br></br> (
                 {cartItems.reduce((a, c) => a + c.qty, 0)}
-                Produkt(e), inkl. Mwst.)<br></br>
+                )Produkt(e), inkl. Mwst.<br></br>
                 <br></br>Total<br></br>
                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}.-- Fr.
               </h2>

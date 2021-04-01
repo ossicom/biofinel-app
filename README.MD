@@ -172,4 +172,9 @@
     1. design order summary fields
     2. design order action
 
-video 26 min 11.45
+27 Create Place Order API
+
+    1. createOrder api
+    2. create orderModel
+    3. create orderRouter
+    4. create post order route
