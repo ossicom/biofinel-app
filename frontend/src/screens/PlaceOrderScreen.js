@@ -40,7 +40,7 @@ export default function PlaceOrderScreen(props) {
           <ul>
             <li>
               <div className='card card-body'>
-                <h2>Versand Adresse</h2>
+                <h2>Empfänger Adresse</h2>
                 <p>
                   {cart.shippingAddress.fullName} <br />
                   {cart.shippingAddress.address}
@@ -104,7 +104,7 @@ export default function PlaceOrderScreen(props) {
               </li>
               <li>
                 <div className='row'>
-                  <div>Porto</div>
+                  <div>Versandkosten</div>
                   <div>{cart.shippingPrice.toFixed(2)} Fr.</div>
                 </div>
               </li>
