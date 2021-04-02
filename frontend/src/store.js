@@ -4,6 +4,7 @@ import { cartReducer } from './reducers/cartReducers';
 import {
   orderCreateReducer,
   orderDetailsReducer,
+  orderMineListReducer,
   orderPayReducer,
 } from './reducers/orderReducers';
 import {
@@ -41,6 +42,7 @@ const reducer = combineReducers({
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer, //After PayPal order video 31
+  orderMineList: orderMineListReducer, //Bestell uebersicht
 });
 
 const composeEnhanger = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
