@@ -32,7 +32,7 @@ function App() {
             </Link>
           </div>
           <div className='button'>
-            <Link to='/product/1'>Haselnüsse</Link>
+            <Link to='/product/:id'>Haselnüsse</Link>
             <Link to='product/2'>Oliven</Link>
             <Link to='product/3'>Honig</Link>
             <Link to='product/4'>Oliven Öl</Link>

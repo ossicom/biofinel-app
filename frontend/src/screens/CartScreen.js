@@ -65,9 +65,10 @@ export default function CartScreen(props) {
                           {x + 1}
                         </option>
                       ))}
-                    </select>
+                    </select>{' '}
+                    Stück a
                   </div>
-                  <div>{item.price} .-- Fr.</div>
+                  <div>{item.price.toFixed(2)} Fr.</div>
                   <button
                     type='button'
                     onClick={() => removeFromCartHandler(item.product)}
@@ -85,11 +86,16 @@ export default function CartScreen(props) {
           <ul>
             <li>
               <h2>
-                Zwischensumme<br></br> (
-                {cartItems.reduce((a, c) => a + c.qty, 0)}
-                )Produkt(e), inkl. Mwst.<br></br>
-                <br></br>Total<br></br>
-                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}.-- Fr.
+                Zwischensumme
+                <br />
+                <br /> ({cartItems.reduce((a, c) => a + c.qty, 0)}) {''}
+                Produkt (e) <br />
+                <br />
+                Total{''} = {''}
+                {cartItems
+                  .reduce((a, c) => a + c.price * c.qty, 0)
+                  .toFixed(2)}{' '}
+                Fr.
               </h2>
             </li>
             <li>
@@ -99,7 +105,7 @@ export default function CartScreen(props) {
                 className='primary block'
                 disabled={cartItems.length === 0}
               >
-                Kaufen
+                Weiter
               </button>
             </li>
           </ul>
