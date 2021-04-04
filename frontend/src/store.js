@@ -12,6 +12,7 @@ import {
   productListReducer,
 } from './reducers/productReducers';
 import {
+  userDetailsReducer,
   userRegisterReducer,
   userSigninReducer,
 } from './reducers/userReducers';
@@ -43,6 +44,7 @@ const reducer = combineReducers({
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer, //After PayPal order video 31
   orderMineList: orderMineListReducer, //Bestell uebersicht
+  userDetails: userDetailsReducer, //User Profile
 });
 
 const composeEnhanger = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

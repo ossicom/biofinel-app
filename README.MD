@@ -216,4 +216,7 @@
     3. show orders in profile screen
     4. style orders
 
-wieter mit 33
+33 Display User Profile
+
+    1. create user details api
+    2. show user information
