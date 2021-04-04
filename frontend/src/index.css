@@ -121,9 +121,9 @@ header a {
   justify-content: space-around;
   align-items: center;
 }
-/* header fixiren beim scrollen */
+/* header fixiren beim scrollen  
+// owereflow hidden von header gelöscht, sonst geht der dropdown nicht*/
 header {
-  overflow: hidden;
   background-color: #203040;
   position: fixed;
   width: 100%;
@@ -135,14 +135,6 @@ header {
   font-weight: bold;
   padding-left: 5rem;
   padding-top: 2rem;
-}
-
-a.kaffee {
-  padding-right: 27rem;
-}
-
-a.anmelden {
-  padding-right: 5rem;
 }
 /*der einkaufswagen style*/
 .badge {
@@ -265,10 +257,32 @@ img.large {
 .form label {
   margin: 1rem 0;
 }
+
 /* Dropdown */
 .dropdown {
   display: inline-block;
   position: relative;
+  background-color: #f02020;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding-right: 2.5rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+  background-color: #f02020;
+  margin: 0;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Checkout Steps */

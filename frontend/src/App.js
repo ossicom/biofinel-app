@@ -45,13 +45,26 @@ function App() {
                 <span className='badge'>{cartItems.length}</span>
               )}
             </Link>
+
             {userInfo ? (
               <div className='dropdown'>
-                <Link to='#'>Willkommen {userInfo.name}</Link>
-                <Link to='/orderhistory'>Bestell Übersicht</Link>
-                <Link to='#signout' onClick={signoutHandler}>
-                  Ausloggen
+                <Link to='#'>
+                  Willkommen {''}
+                  {userInfo.name} <i className='fa fa-caret-down'></i>{' '}
                 </Link>
+                <ul className='dropdown-content'>
+                  <li>
+                    <Link to='/profile'>Benutzer Einstellungen</Link>
+                  </li>
+                  <li>
+                    <Link to='/orderhistory'>Bestell Übersicht</Link>
+                  </li>
+                  <li>
+                    <Link to='#signout' onClick={signoutHandler}>
+                      Abmelden
+                    </Link>
+                  </li>
+                </ul>
               </div>
             ) : (
               <Link to='/signin'>Anmelden</Link>
