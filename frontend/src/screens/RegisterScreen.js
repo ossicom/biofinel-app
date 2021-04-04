@@ -36,7 +36,7 @@ export default function RegisterScreen(props) {
     <div>
       <form className='form' onSubmit={submitHandler}>
         <div>
-          <h1>Create Account</h1>
+          <h1>Konto Erstellen</h1>
         </div>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant='danger'>{error}</MessageBox>}
@@ -51,7 +51,7 @@ export default function RegisterScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor='email'>Email address</label>
+          <label htmlFor='email'>Email Addresse</label>
           <input
             type='email'
             id='email'
@@ -61,7 +61,7 @@ export default function RegisterScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor='password'>Password</label>
+          <label htmlFor='password'>Passwort</label>
           <input
             type='password'
             id='password'
@@ -71,7 +71,7 @@ export default function RegisterScreen(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor='confirmPassword'>Confirm Password</label>
+          <label htmlFor='confirmPassword'>Passwort bestätigen</label>
           <input
             type='password'
             id='confirmPassword'
@@ -83,14 +83,14 @@ export default function RegisterScreen(props) {
         <div>
           <label />
           <button className='primary' type='submit'>
-            Register
+            Registrieren
           </button>
         </div>
         <div>
           <label />
           <div>
-            Already have an account?{' '}
-            <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
+            Haben Sie schon ein Konto?{' '}
+            <Link to={`/signin?redirect=${redirect}`}>Hier Einloggen</Link>
           </div>
         </div>
       </form>

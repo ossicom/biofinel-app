@@ -15,6 +15,7 @@ import {
   userDetailsReducer,
   userRegisterReducer,
   userSigninReducer,
+  userUpdateProfileReducer,
 } from './reducers/userReducers';
 
 //code unten verhindert das löschen der produkte wenn die seite refresht wird zusammen in cartAction.js
@@ -45,6 +46,7 @@ const reducer = combineReducers({
   orderPay: orderPayReducer, //After PayPal order video 31
   orderMineList: orderMineListReducer, //Bestell uebersicht
   userDetails: userDetailsReducer, //User Profile
+  userUpdateProfile: userUpdateProfileReducer, //Update User Profile
 });
 
 const composeEnhanger = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
