@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createProduct, listProducts } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import { PRODUCT_CREATE_RESET } from '../constants/productConstands';
+import { PRODUCT_CREATE_RESET } from '../constants/productConstants';
 
 export default function ProductListScreen(props) {
   const productList = useSelector((state) => state.productList);
-  const { error, loading, products } = productList;
-  //Create Product in AdminScreen Video 37 Basir
+  const { loading, error, products } = productList;
+
   const productCreate = useSelector((state) => state.productCreate);
   const {
     loading: loadingCreate,
@@ -25,7 +25,7 @@ export default function ProductListScreen(props) {
     dispatch(listProducts());
   }, [createdProduct, dispatch, props.history, successCreate]);
   const deleteHandler = () => {
-    //todo dispatch delete
+    /// TODO: dispatch delete action
   };
   const createHandler = () => {
     dispatch(createProduct());
@@ -50,9 +50,9 @@ export default function ProductListScreen(props) {
             <tr>
               <th>ID</th>
               <th>NAME</th>
-              <th>PREIS</th>
-              <th>KATEGORIE</th>
-              <th>MARKE</th>
+              <th>PRICE</th>
+              <th>CATEGORY</th>
+              <th>BRAND</th>
               <th>ACTIONS</th>
             </tr>
           </thead>

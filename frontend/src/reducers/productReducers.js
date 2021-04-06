@@ -9,7 +9,7 @@ import {
   PRODUCT_CREATE_SUCCESS,
   PRODUCT_CREATE_FAIL,
   PRODUCT_CREATE_RESET,
-} from '../constants/productConstands';
+} from '../constants/productConstants';
 
 export const productListReducer = (
   state = { loading: true, products: [] },
@@ -27,10 +27,7 @@ export const productListReducer = (
   }
 };
 
-export const productDetailsReducer = (
-  state = { product: {}, loading: true },
-  action
-) => {
+export const productDetailsReducer = (state = { loading: true }, action) => {
   switch (action.type) {
     case PRODUCT_DETAILS_REQUEST:
       return { loading: true };

@@ -244,3 +244,13 @@
     2. build Create Product button
     3. define product create constant, action and reducer
     4. use action in Product List Screen
+
+bei neuer produkt durch admin werden bilder nicht angezeigt? lösen. video 37
+
+38 build Product edit Screen
+
+    1. create edit screen
+    2. define state
+    3. create fields
+    4. load product details
+    5. add to routes
