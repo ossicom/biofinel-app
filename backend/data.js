@@ -19,7 +19,7 @@ const data = {
     {
       name: 'Geröstete Haselnüsse',
       category: 'Haselnüsse',
-      image: '/images/nuesse/haselnuess.jpg',
+      image: '/images/nuesse/haselnuesse.jpg',
       price: 22,
       countInStock: 20,
       brand: 'kocfindik',
