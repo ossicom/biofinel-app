@@ -9,6 +9,7 @@ import {
 } from './reducers/orderReducers';
 import {
   productCreateReducer,
+  productDeleteReducer,
   productDetailsReducer,
   productListReducer,
   productUpdateReducer,
@@ -51,6 +52,7 @@ const reducer = combineReducers({
   userUpdateProfile: userUpdateProfileReducer, //Update User Profile
   productCreate: productCreateReducer, //Create Product AdminScreen
   productUpdate: productUpdateReducer, //UPDATE PRODUCT VID.39
+  productDelete: productDeleteReducer, // Delete Product Vid40
 });
 
 const composeEnhanger = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
