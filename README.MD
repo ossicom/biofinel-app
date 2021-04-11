@@ -283,3 +283,8 @@
 
     2. create delete order action and reducer
     3. add order delete action to order list
+
+44 Deliver Order
+
+    1. create constant, actions and reducers for deliver order
+    2. add order deliver action to order details screen
