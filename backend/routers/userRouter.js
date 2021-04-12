@@ -100,4 +100,23 @@ userRouter.get(
     res.send(users);
   })
 );
+//Delete users in Admin Screen
+userRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      if (user.email === 'admin@example.com') {
+        res.status(400).send({ message: 'Admin kann nicht gelöscht werden!' });
+        return;
+      }
+      const deleteUser = await user.remove();
+      res.send({ message: 'User gelöscht!', user: deleteUser });
+    } else {
+      res.status(404).send({ message: 'User nicht gefunden!' });
+    }
+  })
+);
 export default userRouter;
