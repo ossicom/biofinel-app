@@ -288,3 +288,22 @@
 
     1. create constant, actions and reducers for deliver order
     2. add order deliver action to order details screen
+
+45 Publish To Heroku Diesen Teill nicht gemacht!
+
+    1. Create git repository
+    2. Create heroku account
+    3. install Heroku CLI
+    4. heroku login
+    5. heroku apps:create <yourname>amazona
+    6. Edit package.json for build script
+    10. Create Procfile
+    12. Create mongodb atlas database
+    19. Set database connection in heroku env variables
+    20. Commit and push
+
+46 List Users
+
+    1. build api for list users
+    2. Create UserList Screen
+    3. create order details constant, action and reducer

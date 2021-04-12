@@ -44,7 +44,7 @@ export default function ProfileScreen() {
     <div>
       <form className='form' onSubmit={submitHandler}>
         <div>
-          <h1>Benutzer Profil</h1>
+          <h1>Ihre Anmelde Daten</h1>
         </div>
         {loading ? (
           <LoadingBox></LoadingBox>

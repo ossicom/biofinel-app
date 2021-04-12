@@ -52,6 +52,7 @@ export default function OrderHistoryScreen(props) {
                   >
                     Details
                   </button>
+                  <button>löschen</button>
                 </td>
               </tr>
             ))}
