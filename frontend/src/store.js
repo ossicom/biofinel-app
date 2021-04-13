@@ -24,6 +24,7 @@ import {
   userRegisterReducer,
   userSigninReducer,
   userUpdateProfileReducer,
+  userUpdateReducer,
 } from './reducers/userReducers';
 
 //code unten verhindert das löschen der produkte wenn die seite refresht wird zusammen in cartAction.js
@@ -55,6 +56,7 @@ const reducer = combineReducers({
   orderMineList: orderMineListReducer, //Bestell uebersicht
   userDetails: userDetailsReducer, //User Profile
   userUpdateProfile: userUpdateProfileReducer, //Update User Profile
+  userUpdate: userUpdateReducer, //Edit Users in Admin Screen
   productCreate: productCreateReducer, //Create Product AdminScreen
   productUpdate: productUpdateReducer, //UPDATE PRODUCT VID.39
   productDelete: productDeleteReducer, // Delete Product Vid40
