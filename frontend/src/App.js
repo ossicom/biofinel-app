@@ -96,6 +96,12 @@ function App() {
                   <li>
                     <Link to='/userlist'>Users</Link>
                   </li>
+                  <li>
+                    {' '}
+                    <Link to='#signout' onClick={signoutHandler}>
+                      Abmelden
+                    </Link>
+                  </li>
                 </ul>
               </div>
             )}

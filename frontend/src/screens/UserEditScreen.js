@@ -101,7 +101,7 @@ export default function UserEditScreen(props) {
             </div>
             <div>
               <button type='submit' className='primary'>
-                Update
+                Aktualisieren
               </button>
             </div>
           </>
