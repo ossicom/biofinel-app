@@ -32,7 +32,7 @@ userRouter.post(
         return;
       }
     }
-    res.status(401).send({ message: 'Invalid email or password' });
+    res.status(401).send({ message: 'Fehler Email oder Passwort!' });
   })
 );
 //route für registration
@@ -108,7 +108,7 @@ userRouter.delete(
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
-      if (user.email === 'admin@example.com') {
+      if (user.email === 'admin@biofinel.ch') {
         res.status(400).send({ message: 'Admin kann nicht gelöscht werden!' });
         return;
       }

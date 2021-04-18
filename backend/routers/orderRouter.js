@@ -92,9 +92,9 @@ orderRouter.delete(
     const order = await Order.findById(req.params.id);
     if (order) {
       const deleteOrder = await order.remove();
-      res.send({ message: 'Order Deleted', order: deleteOrder });
+      res.send({ message: 'Bestellung gelöscht!', order: deleteOrder });
     } else {
-      res.status(404).send({ message: 'Order Not Found' });
+      res.status(404).send({ message: 'Bestellung nicht gefunden!' });
     }
   })
 );
@@ -110,9 +110,9 @@ orderRouter.put(
       order.deliveredAt = Date.now();
 
       const updatedOrder = await order.save();
-      res.send({ message: 'Order Delivered', order: updatedOrder });
+      res.send({ message: 'Bestellung wurde gelöscht!', order: updatedOrder });
     } else {
-      res.status(404).send({ message: 'Order Not Found' });
+      res.status(404).send({ message: 'Bestellung nicht gefunden!' });
     }
   })
 );

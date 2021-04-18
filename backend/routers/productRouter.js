@@ -30,7 +30,7 @@ productRouter.get(
     if (product) {
       res.send(product);
     } else {
-      res.status(404).send({ message: 'Product Not Found' });
+      res.status(404).send({ message: 'Produkt nicht gefunden!' });
     }
   })
 );
@@ -53,7 +53,7 @@ productRouter.post(
       description: 'sample description',
     });
     const createdProduct = await product.save();
-    res.send({ message: 'Product Created', product: createdProduct });
+    res.send({ message: 'Produkt wurde erstellt!', product: createdProduct });
   })
 );
 //UPDATE PRODUCT VID.39
@@ -73,9 +73,12 @@ productRouter.put(
       product.countInStock = req.body.countInStock;
       product.description = req.body.description;
       const updatedProduct = await product.save();
-      res.send({ message: 'Product Updated', product: updatedProduct });
+      res.send({
+        message: 'Produkt wurde Aktualisiert!',
+        product: updatedProduct,
+      });
     } else {
-      res.status(404).send({ message: 'Product Not Found' });
+      res.status(404).send({ message: 'Produkt nicht gefunden!' });
     }
   })
 );
@@ -89,9 +92,9 @@ productRouter.delete(
     const product = await Product.findById(req.params.id);
     if (product) {
       const deleteProduct = await product.remove();
-      res.send({ message: 'Product Deleted', product: deleteProduct });
+      res.send({ message: 'Produkt wurde gelöscht!', product: deleteProduct });
     } else {
-      res.status(404).send({ message: 'Product Not Found' });
+      res.status(404).send({ message: 'Produkt nicht gefunden!' });
     }
   })
 );
