@@ -5,7 +5,7 @@ import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
-import connectDatabase from './';
+import connectDatabase from './database/connectDatabase.js';
 
 const app = express();
 app.use(express.json());
