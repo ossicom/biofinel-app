@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { listProducts } from '../actions/productActions';
 import { signout } from '../actions/userActions';
+import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
+import Product from './Product';
 
 export default function Header() {
   const cart = useSelector((state) => state.cart);
@@ -12,6 +16,13 @@ export default function Header() {
   const signoutHandler = () => {
     dispatch(signout());
   };
+
+  const productList = useSelector((state) => state.productList);
+  const { loading, error } = productList;
+
+  useEffect(() => {
+    dispatch(listProducts());
+  }, [dispatch]);
   return (
     <header className='navigation row'>
       <div>
@@ -20,10 +31,18 @@ export default function Header() {
         </Link>
       </div>
       <div>
-        <Link to='/product/:id'>Haselnüsse</Link>
-        <Link to='/product/2'>Oliven</Link>
-        <Link to='product/3'>Honig</Link>
-        <Link to='product/4'>Oliven Öl</Link>
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <MessageBox variant='danger'>{error}</MessageBox>
+        ) : (
+          <ul>
+            <li>haselnüsse</li>
+            <li>Oliven-Öle</li>
+            <li>Honig</li>
+            <li>Oliven</li>
+          </ul>
+        )}
       </div>
       <div>
         <Link to='/cart'>

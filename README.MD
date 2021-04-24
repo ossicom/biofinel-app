@@ -319,5 +319,10 @@
     1. build api for update users
     2. create edit screen UI
 
+49 Procfile erstellen
+im procfile folgendes einfügen
+web: node --experimental-modules backend/server.js
+dieses wird nach dem deployen dafpr sorgen das unser app lauft
+
 Some styles finish
 weiter mit deploy
