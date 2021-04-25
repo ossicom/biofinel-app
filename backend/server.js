@@ -1,6 +1,8 @@
-import express from 'express';
-import dotenv from 'dotenv';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const express = require('express');
 import path from 'path';
+import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
@@ -12,10 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //lesen von env daten
-dotenv.config({
-  path: './config/env/config.env',
-});
-
+dotenv.config({ path: '../config/env/' });
 //mit mongoDb verbinden
 connectDatabase();
 /*

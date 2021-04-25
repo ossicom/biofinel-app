@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 //lesen von env daten
 dotenv.config({
-  path: './config/env/config.env',
+  path: '../config/env',
 });
 
 export const generateToken = (user) => {
