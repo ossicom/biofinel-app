@@ -10,7 +10,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '../config/.env/' });
 
 const app = express();
-
+//Datenbank verbinden
 connectDB();
 
 app.use(express.json());
@@ -27,13 +27,12 @@ app.get('/api/config/paypal', (req, res) => {
 //New foto uploads to App
 /*const __dirname = path.resolve();*/
 app.use('/uploads', express.static(path.join(__dirname, '/uploads'))); //New foto uploads to App
-/*
+
 app.use(express.static(path.join(__dirname, '/frontend/build'))); //nach dem Build
 app.get(
   '*',
   (req, res) => res.sendFile(path.join(__dirname, '/frontend/build/index.html')) //nach dem build
 );
-*/
 
 app.get('/', (req, res) => {
   res.send('Server is ready');
