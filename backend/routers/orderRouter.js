@@ -1,11 +1,11 @@
-import express from 'express';
-import expressAsyncHandler from 'express-async-handler';
-import Order from '../models/orderModel.js';
-import { isAdmin, isAuth } from '../utils.js';
+const express = require('express');
+const expressAsyncHandler = require('express-async-handler');
+const Order = require('../models/orderModel.js');
+const { isAdmin, isAuth } = require('../utils.js');
 
 const orderRouter = express.Router();
 //List Order
-orderRouter.get(
+module.exports = orderRouter.get(
   '/',
   isAuth,
   isAdmin,
@@ -15,7 +15,7 @@ orderRouter.get(
   })
 );
 //Bestell Übersicht von usern
-orderRouter.get(
+module.exports = orderRouter.get(
   '/mine',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -24,7 +24,7 @@ orderRouter.get(
   })
 );
 
-orderRouter.post(
+module.exports = orderRouter.post(
   '/',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -49,7 +49,7 @@ orderRouter.post(
   })
 );
 
-orderRouter.get(
+module.exports = orderRouter.get(
   '/:id',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -62,7 +62,7 @@ orderRouter.get(
   })
 );
 //Nach dem bezahlen mit paypal, kunde will sehen ob seine bezahlung geklappt hat
-orderRouter.put(
+module.exports = orderRouter.put(
   '/:id/pay',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -84,7 +84,7 @@ orderRouter.put(
   })
 );
 //Delete Order in Admin screen
-orderRouter.delete(
+module.exports = orderRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
@@ -99,7 +99,7 @@ orderRouter.delete(
   })
 );
 //Deliver Order
-orderRouter.put(
+module.exports = orderRouter.put(
   '/:id/deliver',
   isAuth,
   isAdmin,
@@ -116,4 +116,3 @@ orderRouter.put(
     }
   })
 );
-export default orderRouter;

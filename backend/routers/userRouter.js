@@ -1,22 +1,22 @@
-import express from 'express';
-import expressAsyncHandler from 'express-async-handler';
-import bcrypt from 'bcryptjs';
-import data from '../data.js';
-import User from '../models/userModel.js';
-import { generateToken, isAdmin, isAuth } from '../utils.js';
+const express = require('express');
+const expressAsyncHandler = require('express-async-handler');
+const bcrypt = require('bcryptjs');
+const data = require('../data.js');
+const User = require('../models/userModel.js');
+const { generateToken, isAdmin, isAuth } = require('../utils.js');
 
 const userRouter = express.Router();
 
-userRouter.get(
+module.exports = userRouter.get(
   '/seed',
   expressAsyncHandler(async (req, res) => {
-    await User.remove({});
+    // await User.remove({});
     const createdUsers = await User.insertMany(data.users);
     res.send({ createdUsers });
   })
 );
 //route for signin
-userRouter.post(
+module.exports = userRouter.post(
   '/signin',
   expressAsyncHandler(async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
@@ -27,16 +27,18 @@ userRouter.post(
           name: user.name,
           email: user.email,
           isAdmin: user.isAdmin,
+          isSeller: user.isSeller,
           token: generateToken(user),
         });
         return;
       }
     }
-    res.status(401).send({ message: 'Fehler Email oder Passwort!' });
+    res.status(401).send({ message: 'Email oder Passwort stimmt nicht!' });
   })
 );
+
 //route für registration
-userRouter.post(
+module.exports = userRouter.post(
   '/register',
   expressAsyncHandler(async (req, res) => {
     const user = new User({
@@ -55,7 +57,7 @@ userRouter.post(
   })
 );
 //User Profile
-userRouter.get(
+module.exports = userRouter.get(
   '/:id',
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
@@ -67,7 +69,7 @@ userRouter.get(
   })
 );
 //Update User Profile
-userRouter.put(
+module.exports = userRouter.put(
   '/profile',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -91,7 +93,7 @@ userRouter.put(
 );
 
 //List Users in Admin screen
-userRouter.get(
+module.exports = userRouter.get(
   '/',
   isAuth,
   isAdmin,
@@ -101,7 +103,7 @@ userRouter.get(
   })
 );
 //Delete users in Admin Screen
-userRouter.delete(
+module.exports = userRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
@@ -120,7 +122,7 @@ userRouter.delete(
   })
 );
 //Edit Users in Admin Screen
-userRouter.put(
+module.exports = userRouter.put(
   '/:id',
   isAuth,
   isAdmin,
@@ -129,8 +131,7 @@ userRouter.put(
     if (user) {
       user.name = req.body.name || user.name;
       user.email = req.body.email || user.email;
-      user.isSeller = req.body.isSeller || user.isSeller;
-      user.isAdmin = req.body.isAdmin || user.isAdmin;
+      user.isAdmin = Boolean(req.body.isAdmin);
       const updatedUser = await user.save();
       res.send({ message: 'User Updated', user: updatedUser });
     } else {
@@ -138,5 +139,3 @@ userRouter.put(
     }
   })
 );
-
-export default userRouter;

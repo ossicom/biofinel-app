@@ -1,10 +1,11 @@
 {
   "name": "biofinel",
-  "type": "module",
+  
   "version": "1.0.0",
-  "description": "1. Zuerst Template in Html erstellen 2. Mit CSS stylen 3. Bilder für die Webseite vorbereiten 4. Mit Create React app die react app erstellen 5. Produkt Komponent zufügen 6. Produkt detail seite erstellen",
+  "description": "Ecommerz website biofinel",
   "main": "index.js",
   "scripts": {
+    "build": "cd frontend && npm install && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js "
   },
   "repository": {
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/ossicom/biofinel-app/issues"
   },
-  "homepage": "https://github.com/ossicom/biofinel-app#readme",
+  "homepage": "https://biofinel.ch",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.3.6",
@@ -25,7 +26,9 @@
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.1",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "mailgun-js": "^0.22.0",
+    "socket.io": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "^7.22.0",

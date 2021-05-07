@@ -5,7 +5,6 @@ import { listProducts } from '../actions/productActions';
 import { signout } from '../actions/userActions';
 import LoadingBox from './LoadingBox';
 import MessageBox from './MessageBox';
-import Product from './Product';
 
 export default function Header() {
   const cart = useSelector((state) => state.cart);

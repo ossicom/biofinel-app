@@ -1,39 +1,21 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
 const express = require('express');
-import path from 'path';
-import dotenv from 'dotenv';
-import productRouter from './routers/productRouter.js';
-import userRouter from './routers/userRouter.js';
-import orderRouter from './routers/orderRouter.js';
-import uploadRouter from './routers/uploadRouter.js';
-import connectDatabase from './database/connectDatabase.js';
+const path = require('path');
+const productRouter = require('./routers/productRouter.js');
+const userRouter = require('./routers/userRouter.js');
+const orderRouter = require('./routers/orderRouter.js');
+const uploadRouter = require('./routers/uploadRouter.js');
+const connectDB = require('../config/db.js');
+const dotenv = require('dotenv');
+//lesen von env daten
+dotenv.config({ path: '../config/.env/' });
 
 const app = express();
+
+connectDB();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//lesen von env daten
-dotenv.config({ path: '../config/env/' });
-//mit mongoDb verbinden
-connectDatabase();
-/*
-const connectDB = async () => {
-  try {
-    await mongoose.connect(
-      process.env.MONGODB_URL || 'mongodb://localhost/biofinel',
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-      }
-    );
-  } catch (error) {
-    err.message('Nicht mit DB verbunden!');
-    process.exit(1);
-  }
-};
-*/
 app.use('/api/uploads', uploadRouter); //New foto uploads to App
 app.use('/api/users', userRouter); //mit userRouter verbinden
 app.use('/api/products', productRouter); //mit productRouter verbinden
@@ -41,13 +23,24 @@ app.use('/api/orders', orderRouter); //mit orderRouter verbinden
 app.get('/api/config/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
 });
-const __dirname = path.resolve(); //New foto uploads to App
+
+//New foto uploads to App
+/*const __dirname = path.resolve();*/
 app.use('/uploads', express.static(path.join(__dirname, '/uploads'))); //New foto uploads to App
+/*
+app.use(express.static(path.join(__dirname, '/frontend/build'))); //nach dem Build
+app.get(
+  '*',
+  (req, res) => res.sendFile(path.join(__dirname, '/frontend/build/index.html')) //nach dem build
+);
+*/
+
 app.get('/', (req, res) => {
   res.send('Server is ready');
 });
+
 //error catcher middleware
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   res.status(500).send({ message: err.message });
 });
 

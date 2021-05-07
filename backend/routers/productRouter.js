@@ -1,12 +1,12 @@
-import express from 'express';
-import expressAsyncHandler from 'express-async-handler';
-import data from '../data.js';
-import Product from '../models/productModel.js';
-import { isAdmin, isAuth } from '../utils.js';
+const express = require('express');
+const expressAsyncHandler = require('express-async-handler');
+const data = require('../data.js');
+const Product = require('../models/productModel.js');
+const { isAdmin, isAuth } = require('../utils.js');
 
 const productRouter = express.Router();
 // product send to frontend
-productRouter.get(
+module.exports = productRouter.get(
   '/',
   expressAsyncHandler(async (req, res) => {
     const products = await Product.find({});
@@ -14,7 +14,7 @@ productRouter.get(
   })
 );
 
-productRouter.get(
+module.exports = productRouter.get(
   '/seed',
   expressAsyncHandler(async (req, res) => {
     // await Product.remove({});
@@ -23,7 +23,7 @@ productRouter.get(
   })
 );
 // api for product details
-productRouter.get(
+module.exports = productRouter.get(
   '/:id',
   expressAsyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id);
@@ -36,7 +36,7 @@ productRouter.get(
 );
 
 //Api for Create Product in Admin Screen
-productRouter.post(
+module.exports = productRouter.post(
   '/',
   isAuth,
   isAdmin,
@@ -57,7 +57,7 @@ productRouter.post(
   })
 );
 //UPDATE PRODUCT VID.39
-productRouter.put(
+module.exports = productRouter.put(
   '/:id',
   isAuth,
   isAdmin,
@@ -84,7 +84,7 @@ productRouter.put(
 );
 
 //Delete Product
-productRouter.delete(
+module.exports = productRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
@@ -98,5 +98,3 @@ productRouter.delete(
     }
   })
 );
-
-export default productRouter;
