@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ossicom.github.io/biofinel",
   "name": "frontend",
   "proxy": "http://127.0.0.1:5000",
   "version": "0.1.0",
@@ -20,6 +21,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "start": "react-scripts start",
     "test": "react-scripts test",
@@ -45,6 +48,7 @@
     "@babel/core": "^7.13.16",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.13.15",
-    "@babel/preset-react": "^7.13.13"
+    "@babel/preset-react": "^7.13.13",
+    "gh-pages": "^3.1.0"
   }
 }
