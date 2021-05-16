@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/biofinel/static/css/main.f34a64e3.chunk.css",
-    "main.js": "/biofinel/static/js/main.299dfd2e.chunk.js",
-    "main.js.map": "/biofinel/static/js/main.299dfd2e.chunk.js.map",
-    "runtime-main.js": "/biofinel/static/js/runtime-main.615eeaf8.js",
-    "runtime-main.js.map": "/biofinel/static/js/runtime-main.615eeaf8.js.map",
-    "static/js/2.b08253af.chunk.js": "/biofinel/static/js/2.b08253af.chunk.js",
-    "static/js/2.b08253af.chunk.js.map": "/biofinel/static/js/2.b08253af.chunk.js.map",
-    "static/js/3.467a5106.chunk.js": "/biofinel/static/js/3.467a5106.chunk.js",
-    "static/js/3.467a5106.chunk.js.map": "/biofinel/static/js/3.467a5106.chunk.js.map",
-    "index.html": "/biofinel/index.html",
-    "static/css/main.f34a64e3.chunk.css.map": "/biofinel/static/css/main.f34a64e3.chunk.css.map",
-    "static/js/2.b08253af.chunk.js.LICENSE.txt": "/biofinel/static/js/2.b08253af.chunk.js.LICENSE.txt"
+    "main.css": "/biofinel-app/static/css/main.f34a64e3.chunk.css",
+    "main.js": "/biofinel-app/static/js/main.299dfd2e.chunk.js",
+    "main.js.map": "/biofinel-app/static/js/main.299dfd2e.chunk.js.map",
+    "runtime-main.js": "/biofinel-app/static/js/runtime-main.25be63ea.js",
+    "runtime-main.js.map": "/biofinel-app/static/js/runtime-main.25be63ea.js.map",
+    "static/js/2.b08253af.chunk.js": "/biofinel-app/static/js/2.b08253af.chunk.js",
+    "static/js/2.b08253af.chunk.js.map": "/biofinel-app/static/js/2.b08253af.chunk.js.map",
+    "static/js/3.467a5106.chunk.js": "/biofinel-app/static/js/3.467a5106.chunk.js",
+    "static/js/3.467a5106.chunk.js.map": "/biofinel-app/static/js/3.467a5106.chunk.js.map",
+    "index.html": "/biofinel-app/index.html",
+    "static/css/main.f34a64e3.chunk.css.map": "/biofinel-app/static/css/main.f34a64e3.chunk.css.map",
+    "static/js/2.b08253af.chunk.js.LICENSE.txt": "/biofinel-app/static/js/2.b08253af.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.615eeaf8.js",
+    "static/js/runtime-main.25be63ea.js",
     "static/js/2.b08253af.chunk.js",
     "static/css/main.f34a64e3.chunk.css",
     "static/js/main.299dfd2e.chunk.js"
